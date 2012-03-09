@@ -1,0 +1,22 @@
+<h1>All Signups</h1>
+
+<%= will_paginate %>
+
+<table align="center" width="800px" border="1" cellpadding="3" cellspacing="0">
+	<tr>
+		<th><%= link_to "Email Address", :sort => "email" %></th>
+		<th><%= link_to "Invitation Code", :sort => "invitation_token" %></th>
+		<th><%= link_to "Referred By (Code)", :sort => "sender_id" %></th>
+		<th><%= link_to "Referrals Made", :sort => "" %></th>
+	</tr>
+<% @signups.each do |signups| %>
+	<tr>
+		<td><%= signups.email %></td>
+		<td><%= signups.invitation_token %></td>
+		<td><%= signups.sender_id %></td>
+		<td align="center"><%= Signup.count(:conditions => ['sender_id = ?', signups.invitation_token ]) %></td>
+	</tr>
+<% end %>
+</table>
+
+<%= will_paginate %>

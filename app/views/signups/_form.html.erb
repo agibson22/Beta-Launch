@@ -1,0 +1,18 @@
+<%= form_for(@signup) do |f| %>
+	<% if @signup.errors.any? %>
+    	<div id="error_explanation">
+      		<ul>
+      			<% @signup.errors.full_messages.each do |msg| %>
+        		<li><%= msg %></li>
+      			<% end %>
+      		</ul>
+    	</div>
+  	<% end %>
+	<div>
+		<div>
+			<%= f.text_field :email, :placeholder => "Email Address" %>
+			<%= f.hidden_field :sender_id, { :value => params[:p] } %>
+			<%= f.submit "Join", :class => "beta-button" %>
+  		</div>
+	</div>	
+<% end %>

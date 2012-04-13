@@ -13,7 +13,7 @@
 	<tr>
 		<td><%= signups.email %></td>
 		<td><%= signups.invitation_token %></td>
-		<td><%= signups.sender_id %></td>
+		<td><% if signups.sender_id? %><%= signups.sender_id %><% else %>N/A<% end %></td>
 		<td align="center"><%= Signup.count(:conditions => ['sender_id = ?', signups.invitation_token ]) %></td>
 	</tr>
 <% end %>

@@ -4,11 +4,6 @@ class SignupsController < ApplicationController
   
   def index
     @signups = Signup.paginate(:page => params[:page], :per_page => 10)
-    @signups_number_of_referrals
-  end
-  
-  def show_referrer
-    
   end
 
   def new
@@ -18,18 +13,19 @@ class SignupsController < ApplicationController
   def create
     @signup = Signup.new(params[:signup])
     if @signup.save
-      render :thanks
+      redirect_to @signup, :notice => "Thanks for Signing Up!"
     else
-      render :new, :notice => "We Need a Valid Email Address, Heezy"
+      flash.now[:notice] = "Please Enter a Valid Email Address"
+      render :action => "new"
     end
   end
   
-  def thanks
-    
-  end
-  
   def show
-    
+    @signup = Signup.find(params[:id])
+    @your_domain = "http://" + request.host_with_port
+    @referral_code_identifier = "/?p="
+    @twitter_domain_text = "http://twitter.com/home/?status="
+    @twitter_message_text = "I just signed up for @AgileZen - you should, too! "
   end
 
 end

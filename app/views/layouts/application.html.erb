@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div id="container">
+		<div class="pane">
+			<%= yield %>
+		</div>
+	</div>
 
-<%= yield %>
+<script type='text/javascript'>
+$(function(){
+    $('#container') .css({'height': (($(window).height()))+'px'});
+    $(window).resize(function(){
+        $('#container') .css({'height': (($(window).height()))+'px'});
+    });
+});
+</script>
 
 </body>
 </html>

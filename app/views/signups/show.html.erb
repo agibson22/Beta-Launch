@@ -1,0 +1,14 @@
+<div>
+	<h1>Sharing is Caring</h1>
+	<p>
+		Spread the Word and get cool shit:
+	</p>
+	<p>
+		<span>Share this Link:</span><br />
+		<%= @your_domain %><%= @referral_code_identifier %><%= @signup.invitation_token %>
+	</p>
+	<p>
+		<span>You Should Share This On Twitter:</span><br />
+		<a href="<%=@twitter_domain_text %><%= @twitter_message_text %><%= @your_domain %><%= @referral_code_identifier %><%= @signup.invitation_token %>" target="_blank">Share</a>
+	</p>
+</div>

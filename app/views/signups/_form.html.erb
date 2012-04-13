@@ -9,7 +9,7 @@
     	</div>
   	<% end %>
 	<div>
-		<div>
+		<div class="signup-form">
 			<%= f.text_field :email, :placeholder => "Email Address" %>
 			<%= f.hidden_field :sender_id, { :value => params[:p] } %>
 			<%= f.submit "Join", :class => "beta-button" %>

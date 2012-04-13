@@ -1,3 +1,119 @@
 // Place all the styles related to the signups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 1em;
+	background: #fff;
+	min-height: 600px;
+	min-width: 960px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+	position: relative;
+	width: 100%;
+	background: #404041;
+}
+
+.pane {
+	position: absolute;
+	width: 800px;
+	height: 580px;
+	left: 50%;
+	margin-left: -400px;
+	top: 50%;
+	margin-top: -300px;
+	background: #fff;
+	padding: 10px;
+}
+
+.notice {
+	font-size: 1.5em;
+	color: red;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+div.signup-form {
+	#signup_email {
+		width: 300px;
+		height: 50px;
+		font-size: 1.4em;
+		color: #404041;
+		padding-left: 5px;
+		border-radius: 5px;
+		border: solid 1px #404041;
+		&:active {
+			border: solid 1px #5cb811;
+		}
+		&:focus {
+			border: solid 1px #5cb811;
+		}
+	}
+	.beta-button {
+		font-size: 1.4em;
+		color: #fff;
+		-moz-box-shadow: inset 0px 0px 0px 0px #5cb811;
+		-webkit-box-shadow: inset 0px 0px 0px 0px #5cb811;
+		box-shadow: inset 0px 0px 0px 0px #5cb811;	
+		background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+		background: -moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+		background-color: #77d42a;
+		position: relative;
+		padding: 12px 50px 12px 50px;
+		text-decoration: none;
+		color: #fff;
+		border: solid 1px #5cb811;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		&:hover {
+			color: #fff;
+		}
+		&:active {
+			padding: 13px 50px 11px 50px;
+			top: 1px;
+			background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+			background: -moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+			background-color: #5cb811;
+		}
+	}
+}
+
+div#error_explanation {
+	color: red;
+	font-size: 1.5em;
+	ul {
+		margin-left: -35px;
+		margin-bottom: 10px;
+		li {
+			list-style: none;
+			display: inline;
+		}
+	}
+}
+
+div.field_with_errors {
+	display: inline;
+	input#signup_email {
+		border-color: red;
+		&:active {
+			border-color: red;
+		}
+		&:focus {
+			border-color: red;
+		}
+	}
+}
+
+h1 {
+	font-size: 3em;
+	color: #404041;
+}

@@ -1,11 +1,7 @@
 <%= form_for(@signup) do |f| %>
 	<% if @signup.errors.any? %>
     	<div id="error_explanation">
-      		<ul>
-      			<% @signup.errors.full_messages.each do |msg| %>
-        		<li><%= msg %></li>
-      			<% end %>
-      		</ul>
+			<%= @signup.errors.full_messages.first %>
     	</div>
   	<% end %>
 	<div>

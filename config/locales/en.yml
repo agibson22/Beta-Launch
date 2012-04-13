@@ -11,5 +11,5 @@ en:
               signup:
                   attributes:
                       email:
-                          blank: "Please Enter a Valid Email Address"
-                          invalid: ""
+                          blank: "Please Enter an Email Address"
+                          invalid: "Please Enter a Valid Email Address"

@@ -117,3 +117,32 @@ h1 {
 	font-size: 3em;
 	color: #404041;
 }
+
+.spread {
+	font-size: 1.5em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sharing {
+	span {
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+	.full-link {
+		background: #404041;
+		border: solid 2px black;
+		color: #fff;
+		padding: 20px;
+		font-family: Courier;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+}
+
+.twitter {
+	p {
+		font-size: 1.1em;
+		margin-bottom: 15px;
+	}
+}
